@@ -1,0 +1,15 @@
+#
+# GitPitch Slideshow Custom Settings
+#
+# For details, visit Wiki:
+# https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
+#
+theme : sky
+theme-override : assets/css/PITCHME.css
+# theme-override : assets/css/PITCHME.codemax.css
+logo : assets/image/logo.png
+highlight : hybrid
+background-color : #8fc6d7
+transition : none
+published : true
+footnote : "Python course @Cegeka"
