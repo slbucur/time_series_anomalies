@@ -302,13 +302,13 @@ Network throughput graph represented by:
 
 ---
 
-@snap[west]
+@snap[north]
 Pros:
 * fast
 * easy to understand
 @snapend
 
-@snap[east]
+@snap[south]
 Cons:
 * cannot model complex data sets
 @snapend
@@ -331,13 +331,13 @@ Examples:
 
 ---
 
-@snap[west]
+@snap[north]
 Pros:
 
 * can simulate very complex models
 @snapend
 
-@snap[east]
+@snap[south]
 Cons:
 * very slow time to train => more useful when having multiple metrics as inputs
 @snapend
