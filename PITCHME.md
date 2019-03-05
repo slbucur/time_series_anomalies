@@ -79,7 +79,7 @@ I don't know about you, but I'm not very confident this is the right solution.
 ---
 
 ![Image](assets/bird-canny.png)
-![Image](assets/triforce.svg)
+![Image](assets/triforce.png)
 
 Note:
 
