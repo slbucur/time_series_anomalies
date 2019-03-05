@@ -213,6 +213,8 @@ Trying to learn patterns in data, without having labels:
 
 ### K-means
 
+<a href="http://web.stanford.edu/class/ee103/visualizations/kmeans/kmeans.html"> direct link <a>
+
 <iframe height="600" style="width: 100%;" scrolling="no" title="WmxBWz" src="http://web.stanford.edu/class/ee103/visualizations/kmeans/kmeans.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
 </iframe>
 
@@ -300,18 +302,16 @@ Network throughput graph represented by:
 
 ---
 
-@snap[east]
+@snap[west]
 Pros:
-@snapend
-
 * fast
 * easy to understand
+@snapend
 
 @snap[east]
 Cons:
-@snapend
-
 * cannot model complex data sets
+@snapend
 
 ---
 
@@ -331,16 +331,16 @@ Examples:
 
 ---
 
-@snap[east]
+@snap[west]
 Pros:
-@snapend
+
 * can simulate very complex models
+@snapend
 
 @snap[east]
 Cons:
-@snapend
 * very slow time to train => more useful when having multiple metrics as inputs
-
+@snapend
 
 
 
