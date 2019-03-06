@@ -215,7 +215,7 @@ Trying to learn patterns in data, without having labels:
 
 <a href="http://web.stanford.edu/class/ee103/visualizations/kmeans/kmeans.html"> direct link <a>
 
-<iframe height="600" style="width: 100%;" scrolling="no" title="WmxBWz" src="http://web.stanford.edu/class/ee103/visualizations/kmeans/kmeans.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="600" style="width: 100%;" scrolling="no" title="WmxBWz" src="https://slbucur.me/kmeans" frameborder="no" allowtransparency="true" allowfullscreen="true">
 </iframe>
 
 Note:
