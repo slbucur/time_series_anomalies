@@ -13,3 +13,4 @@ background-color : #8fc6d7
 transition : none
 published : true
 footnote : "ML for monitoring data @Cegeka"
+mathjax : TeX-MML-AM_HTMLorMML-full
