@@ -517,12 +517,15 @@ For our dataset we focus mainly on the trend and the seasonality.
 
 ---
 
+@snap[north]
 ### Anomaly detection model
+@snapend
+
 
 `$$A_l(t) = \frac{min(Dist(M_u(t), D(t)), min(Dist(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
 
-
 ---
+
 <!-- .slide: style="text-align: left;"> -->
 
 In this formula:
