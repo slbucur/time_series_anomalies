@@ -518,7 +518,7 @@ For our dataset we focus mainly on the trend and the seasonality.
 ---
 
 @snap[north]
-### Anomaly detection model
+Anomaly detection model
 @snapend
 
 
