@@ -519,10 +519,11 @@ For our dataset we focus mainly on the trend and the seasonality.
 
 ### Anomaly detection model
 
-<!-- .slide: style="text-align: left;"> -->  
-
 `$$A_l(t) = \frac{min(Distance(M_u(t), D(t)), min(Distance(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
 
+
+---
+<!-- .slide: style="text-align: left;"> -->
 
 In this formula:
 * `\(A_l(t)\)` - anomaly likelihood - real number between 0 and 1
