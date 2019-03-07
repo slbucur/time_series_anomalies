@@ -415,7 +415,10 @@ Example of metric data for a Linux server.
 
 ---
 
+@snap[north]
 ### Time series anomaly detection
+@snapend
+
 
 ---
 
@@ -533,6 +536,41 @@ In this formula:
   * factor of two - anything with twice the distance => 100% anomaly likelihood
 
 ---
+
+### Demo time
+
+<iframe height="600" style="width: 1200px;max-width:1200px!important;margin-left:-100px" scrolling="no" title="WmxBWz" src="https://mon.cegeka.be/anomaly_graph/" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
+
+<a href="https://mon.cegeka.be/anomaly_graph/"> direct link <a>
+
+Note:
+
+Click on **show bounds**.
+This will show the distance between the model bounds and the actual data.
+
+---
+
+## Special cases
+
+---
+
+### Extremely high seasonal spikes
+
+![Image](assets/high-seasonal-spikes.png)
+
+---
+
+* graphs with very steep daily spikes
+* a device where the network interface is rarely used
+* the device has daily backups
+
+---
+
+### Solution
+
+* implemented a seasonal spike detector
+* eliminates the spikes from the anomaly set
 
 
 
