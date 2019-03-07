@@ -188,8 +188,6 @@ What is the probability that Jack or Rose survived?
   </tr>
 </table>
 
----
-
 
 Note:
 
@@ -201,6 +199,8 @@ and our intuition, we notice two things:
 From this we can conclude that James Cameron is a good statistician.
 
 ---
+
+<!-- .slide: style="text-align: left"> -->
 
 ## Unsupervised learning
 
