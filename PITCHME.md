@@ -519,6 +519,8 @@ For our dataset we focus mainly on the trend and the seasonality.
 
 ### Anomaly detection model
 
+<!-- .slide: style="text-align: left;"> -->  
+
 `$$A_l(t) = \frac{min(Distance(M_u(t), D(t)), min(Distance(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
 
 
@@ -527,7 +529,7 @@ In this formula:
 * `\(D(t)\)` - the value of the timestamp in the original dataset
 * `\(M_l(t)\)` - the Model lower bound
 * `\(M_u(t)\)` - the Model upper bound
-* `\Factor\)` - number multiplied with the difference between the upper and lower bounds
+* `\(Factor\)` - number multiplied with the difference between the upper and lower bounds
   * factor of two - anything with twice the distance => 100% anomaly likelihood
 
 ---
