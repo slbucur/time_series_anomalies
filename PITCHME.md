@@ -334,5 +334,203 @@ Pros:
 Cons:
 * very slow time to train => more useful when having multiple metrics as inputs
 
+---
+
+### Data description
+
+---
+
+* Data coming from Zenoss
+  * main monitoring tool 
+  * monitors approximately **20.000** devices
+* Device
+  * unit required to run a service - ex. **linux server**
+  * can be hardware or software - ex. **physical server** or **database server**
+  * usually has multiple components - ex. **network interfaces**
+
+---
+
+* Metrics can be associated to components or devices
+  * time series data
+  * performance of a system - ex. **CPU** or **RAM** usage
+  * stored in **OpenTSDB**
+
+* Graphs
+  * plot one or multiple metrics
+  * useful for engineers
+
+---
+
+![Image](assets/monitoring-data-linux.png)
+
+Note:
+Example of metric data for a Linux server.
+
+---
+
+### Data summary
+
+<table style="font-size:0.5em">
+<tbody>
+    <tr>
+        <td width="141">
+            <p><strong>Data Item</strong></p>
+        </td>
+        <td width="170">
+            <p><strong>Count</strong></p>
+        </td>
+    </tr>
+    <tr>
+        <td width="141">
+            <p>Devices</p>
+        </td>
+        <td width="170">
+            <p>20.000</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="141">
+            <p>Components</p>
+        </td>
+        <td width="170">
+            <p>1.300.000</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="141">
+            <p>Graph definitions</p>
+        </td>
+        <td width="170">
+            <p>1.500.000</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="141">
+            <p>Metrics</p>
+        </td>
+        <td width="170">
+            <p>3.000.000</p>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+---
+
+### Time series anomaly detection
+
+---
+
+### What is an anomaly?
+
+Anomalies can be defined in two ways:
+* manually
+* statistically
+
+Note:
+* Manually:
+  * engineers manually label timestamps as anomalies
+  * supervised learning
+* Statistically
+  * values are statistically different than the others
+  * unsupervised learning
+
+We don't have labeled data yet, as such we picked the statistical definition.
+Using labeled data, we can improve our model.
+
+---
+
+
+![Image](assets/spike-graph.png)
+
+Note:
+Notice the anomalies in the orange rectangles.
+They are usually larger than the other points.
+
+
+---
+
+### Seasonality
+
+* not all spikes are anomalies
+* most our data has a high degree of seasonality
+  * high usage during the day and the week
+  * low usage during the night and the weekend
+
+Note:
+
+The high seasonality is because our customers are located mostly in Europe.
+
+---
+### Seasonal spikes
+
+![Image](assets/seasonal-spikes.png)
+
+Note:
+The graph above shows the network usage of a device during the week.
+Notice
+
+* every 7 days, two have lower usage (Sunday and Saturday).
+
+The graph below shows the network usage of a device during the day. 
+Notice:
+
+* much lower usage during the night.
+* quite a dip in usage at lunch
+
+---
+
+### Facebook prophet
+
+* library developed by facebook
+* models time series data
+* very good for highly seasonal data
+
+Note:
+
+We also tried other approaches like ARIMA and ETS, but they required manual tuning to generate a model.
+
+---
+
+### Forecasting model
+
+
+`$$y(t) = g(t) + s(t) + h(t) + e(t)$$`
+
+
+In this formula:
+* `\(y(t)\)` - model output function
+* `\(g(t)\)` - trend of the dataset
+* `\(s(t)\)` - seasonality of the dataset
+* `\(h(t)\)` - holidays
+* `\(e(t)\)` - error
+
+Note:
+
+For our dataset we focus mainly on the trend and the seasonality.
+
+---
+
+### Model decomposition
+![Image](assets/model-decomposition-fbprophet.png)
+
+
+---
+
+### Anomaly detection model
+
+`$$A_l(t) = \frac{min(Distance(M_u(t), D(t)), min(Distance(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
+
+
+In this formula:
+* `\(A_l(t)\)` - anomaly likelihood - real number between 0 and 1
+* `\(D(t)\)` - the value of the timestamp in the original dataset
+* `\(M_l(t)\)` - the Model lower bound
+* `\(M_u(t)\)` - the Model upper bound
+* `\Factor\)` - number multiplied with the difference between the upper and lower bounds
+  * factor of two - anything with twice the distance => 100% anomaly likelihood
+
+---
+
 
 
