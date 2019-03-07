@@ -233,6 +233,8 @@ being the number of words they have in common.
 
 ---
 
+<!-- .slide: style="text-align: left"> -->
+
 We have two types of data:
 * performance data
 * events
@@ -285,7 +287,7 @@ Network throughput graph represented by:
 
 ### Demo time
 
-<iframe height="600" style="width: 100%;" scrolling="no" title="WmxBWz" src="https://mon.cegeka.be/anomaly_graph/" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="600" style="width: 1200px;max-width:1200px!important;margin-left:-100px" scrolling="no" title="WmxBWz" src="https://mon.cegeka.be/anomaly_graph/" frameborder="no" allowtransparency="true" allowfullscreen="true">
 </iframe>
 
 <a href="https://mon.cegeka.be/anomaly_graph/"> direct link <a>
@@ -310,6 +312,8 @@ Network throughput graph represented by:
 
 
 ---
+
+<!-- .slide: style="text-align: left"> -->
 
 Pros:
 * fast
@@ -336,6 +340,7 @@ Examples:
 
 ---
 
+<!-- .slide: style="text-align: left"> -->
 
 Pros:
 * can simulate very complex models
@@ -345,21 +350,25 @@ Cons:
 
 ---
 
+<!-- .slide: style="text-align: left; font-size: 0.8em"> -->
+
 ### Data description
 
----
-
-* Data coming from Zenoss
+* Zenoss
   * main monitoring tool 
   * monitors approximately **20.000** devices
-* Device
+  * main source of data
+* Devices
   * unit required to run a service - ex. **linux server**
   * can be hardware or software - ex. **physical server** or **database server**
   * usually has multiple components - ex. **network interfaces**
 
 ---
 
-* Metrics can be associated to components or devices
+<!-- .slide: style="text-align: left; font-size: 0.8em"> -->
+
+* Metrics 
+  * can be associated to components or devices
   * time series data
   * performance of a system - ex. **CPU** or **RAM** usage
   * stored in **OpenTSDB**
@@ -377,49 +386,29 @@ Example of metric data for a Linux server.
 
 ---
 
-### Data summary
+** Data summary **
 
-<table style="font-size:0.5em">
+<table style="font-size:0.8em">
 <tbody>
     <tr>
-        <td width="141">
-            <p><strong>Data Item</strong></p>
-        </td>
-        <td width="170">
-            <p><strong>Count</strong></p>
-        </td>
+        <th> Data Item </th>
+        <th> Count </th>
     </tr>
     <tr>
-        <td width="141">
-            <p>Devices</p>
-        </td>
-        <td width="170">
-            <p>20.000</p>
-        </td>
+        <td> Devices </td>
+        <td> 20.000 </td>
     </tr>
     <tr>
-        <td width="141">
-            <p>Components</p>
-        </td>
-        <td width="170">
-            <p>1.300.000</p>
-        </td>
+        <td> Components </td>
+        <td> 1.300.000 </td>
     </tr>
     <tr>
-        <td width="141">
-            <p>Graph definitions</p>
-        </td>
-        <td width="170">
-            <p>1.500.000</p>
-        </td>
+        <td>Graph definitions</td>
+        <td>1.500.000</td>
     </tr>
     <tr>
-        <td width="141">
-            <p>Metrics</p>
-        </td>
-        <td width="170">
-            <p>3.000.000</p>
-        </td>
+        <td>Metrics</td>
+        <td>3.000.000</td>
     </tr>
 </tbody>
 </table>
