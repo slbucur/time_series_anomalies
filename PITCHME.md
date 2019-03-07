@@ -517,7 +517,7 @@ For our dataset we focus mainly on the trend and the seasonality.
 
 ---
 
-<!-- .slide: style="text-align: left;font-size:0.5em"> -->
+<!-- .slide: style="text-align: left;font-size:0.8em"> -->
 
 @snap[north]
 ** Anomaly detection model **
