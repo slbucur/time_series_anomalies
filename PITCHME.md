@@ -519,7 +519,7 @@ For our dataset we focus mainly on the trend and the seasonality.
 
 ### Anomaly detection model
 
-`$$A_l(t) = \frac{min(Distance(M_u(t), D(t)), min(Distance(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
+`$$A_l(t) = \frac{min(Dist(M_u(t), D(t)), min(Dist(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
 
 
 ---
