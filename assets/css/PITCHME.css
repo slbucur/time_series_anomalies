@@ -18,14 +18,14 @@
   border-radius: 10px;
 }
 
-.reveal .slides section .code-presenting-annotation {
+/* .reveal .slides section .code-presenting-annotation {
   color: white;
   background: #3f6f99;
   padding: 1px 15px;
   border-radius: 15px;
   opacity: 0.75 !important;
   font-size: 50% !important;
-}
+} */
 
 .reveal p span.slide-title {
   color: white;
