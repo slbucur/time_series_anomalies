@@ -525,7 +525,7 @@ For our dataset we focus mainly on the trend and the seasonality.
 @snapend
 
 
-`$$A_l(t) = \frac{min(Dist(M_u(t), D(t)), min(Dist(M_u(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
+`$$A_l(t) = \frac{min(Dist(M_u(t), D(t)), min(Dist(M_l(t), D(t)))}{factor * ( M_u(t) - M_l(t)}$$`
 
 In this formula:
 * `\(A_l(t)\)` - anomaly likelihood - real number between 0 and 1
